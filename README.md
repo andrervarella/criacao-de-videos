@@ -4,6 +4,10 @@ Repositório **público** com materiais de vídeo: logos, molduras, layouts, art
 
 Existe para que ferramentas de vídeo (vidIQ, OpusClip, HyperFrames, Fenaky, Canva etc.) consigam acessar os arquivos por um **link público**.
 
+## Manuais
+
+- **GTA Loucura:** [`gta-loucura/PLAYBOOK.md`](gta-loucura/PLAYBOOK.md) — como criar, editar e postar (vale para Claude, ChatGPT e Codex).
+
 ## Pastas
 
 | Pasta | O que vai nela |
