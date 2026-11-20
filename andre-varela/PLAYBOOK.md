@@ -78,3 +78,8 @@ O formato do `slides.json` é o mesmo da GTA Loucura (`tipo`, `etiqueta`, `titul
 - [ ] Conectar @treinadorandrevarela no vidIQ, para postar e agendar.
 - [ ] Separar algumas fotos e vídeos de treino do André, para fotos e B-roll.
 - [x] Registro no repositório privado: `instagram/MECANISMOS_CRIACAO_CLAUDE_2026-11-20.md`.
+
+
+## Regra de estilo (20/11/2026)
+- **Sem contador de páginas** ("1/7", "2/7") nos carrosséis: o Instagram já mostra e o André acha que deixa cara de feito por IA. Em geral, evitar marcas visuais típicas de template de IA.
+- Gerador atual: `andre-varela/scripts/carrossel_av_v1.py` (preto, prata, vermelho #A11218 pontual, logo oficial recortada).

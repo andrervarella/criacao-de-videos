@@ -59,9 +59,7 @@ def topo(im, n, total):
     im.alpha_composite(logo, (M, 62))
     espacado(d, (M + lw + 22, 64), 'ANDRÉ VARELA', F(26, 'SemiBold'), BRANCO, 0.22)
     espacado(d, (M + lw + 22, 100), 'PERFORMANCE & EVOLUÇÃO', F(15, 'Medium'), PRATA, 0.28)
-    t = f'{n:02d} / {total:02d}'
-    espacado(d, (W - M, 72), t, F(22, 'Medium'), PRATA, 0.12, anchor='r')
-    d.rectangle([W - M - 36, 108, W - M, 111], fill=VERM)
+    # Sem contador de páginas (1/7): o Instagram já mostra, e o André acha que deixa cara de IA.
 
 def rodape(im, fonte):
     d = ImageDraw.Draw(im); d.rectangle([M, 1252, W - M, 1253], fill=(70, 72, 78))
