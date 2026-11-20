@@ -46,10 +46,12 @@
 
 ## 5. Identidade visual nos posts
 
-- **Cores:** preto (fundo), vermelho `#E11018` (destaque), prata/branco (texto e linhas).
-- **Marca:** "ANDRÉ VARELA" + "PERFORMANCE & EVOLUÇÃO". Quando subirem o logo AV para `andre-varela/logo/logo-av.png`, o gerador usa o logo no lugar do texto.
+- **Fonte oficial da marca:** o repositório privado `AV-LANDPAGE-VIDEOS` (`AGENTS.md`, `marca/IDENTIDADE_AV.md`, `instagram/PROTOCOLO_EDITORIAL_7_ETAPAS_AV.md`). Em caso de conflito, **o repositório privado vence**.
+- **Cores:** preto e grafite (fundo), prata/aço e branco (texto e linhas), vermelho de assinatura `#A11218` usado **só como detalhe**. Estética de luxo discreto, sem brilho exagerado nem clichê de academia.
+- **Marca:** "ANDRÉ VARELA" (com um L) + "PERFORMANCE & EVOLUÇÃO". O **monograma AV é intocável**: usar só o arquivo oficial, nunca redesenhar. Em 20/11/2026 o arquivo ainda **não está** em nenhum repositório; quando chegar, vai para `andre-varela/logo/logo-av.png` e o gerador passa a usá-lo no lugar do nome escrito.
 - **Fonte:** Montserrat (Black/ExtraBold), títulos em caixa alta.
-- **Fotos:** fotos reais do André treinando ou dando aula. Ele é a prova de autoridade.
+- **Fotos:** só fotos reais do André, as favoritas ficam em `AV-LANDPAGE-VIDEOS/assets/originais/01_FOTOS_FAVORITAS_USAR_COMO_BASE/`. Elas são privadas: só copiar uma foto para este repositório público (para gerar link) depois que o André aprovar aquele post. Fotos de competição precisam de contexto (não representam a forma atual).
+- **Publicação:** no Instagram AV, só posta depois da aprovação do André para cada peça (regra do `AGENTS.md` privado).
 
 ## 6. Legenda e hashtags
 
@@ -72,7 +74,7 @@ O formato do `slides.json` é o mesmo da GTA Loucura (`tipo`, `etiqueta`, `titul
 
 ## 8. Pendências para destravar
 
-- [ ] Subir o logo AV em PNG (fundo transparente) para `andre-varela/logo/logo-av.png`.
+- [ ] Enviar o arquivo oficial do monograma AV (o print `Screenshot_20261027_123545_WhatsApp.jpg` ou um PNG/vetor).
 - [ ] Conectar @treinadorandrevarela no vidIQ, para postar e agendar.
 - [ ] Separar algumas fotos e vídeos de treino do André, para fotos e B-roll.
-- [ ] Copiar este playbook para o repositório privado `AV-LANDPAGE-VIDEOS`, para o Codex também seguir.
+- [x] Registro no repositório privado: `instagram/MECANISMOS_CRIACAO_CLAUDE_2026-11-20.md`.

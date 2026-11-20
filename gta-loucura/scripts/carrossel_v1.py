@@ -40,11 +40,11 @@ def fundo(foco_y=0.55, escurecer=150):
     if not TEMA.get('fundo'):
         im = Image.new('RGBA', (W, H), (8, 8, 10, 255)); d = ImageDraw.Draw(im)
         glow = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(glow)
-        gd.ellipse([W - 420, -380, W + 380, 380], fill=(*PINK, 70))
-        gd.ellipse([-300, H - 260, 380, H + 300], fill=(*PINK, 40))
+        gd.ellipse([W - 420, -380, W + 380, 380], fill=(*PINK, 45))
+        gd.ellipse([-300, H - 260, 380, H + 300], fill=(*PINK, 22))
         im.alpha_composite(glow.filter(ImageFilter.GaussianBlur(120)))
         lin = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lin)
-        for x in range(-H, W, 46): ld.line([(x, H), (x + H, 0)], fill=(255, 255, 255, 6), width=2)
+        for x in range(-H, W, 46): ld.line([(x, H), (x + H, 0)], fill=(255, 255, 255, 3), width=2)
         im.alpha_composite(lin)
         return im
     bg = Image.open(os.path.join(RAIZ, TEMA['fundo'])).convert('RGBA')

@@ -1,5 +1,31 @@
 {
- "tema": {"logo": "logo/logo-av.png", "fundo": null, "handle": "@treinadorandrevarela",
-          "marca": "ANDRÉ VARELA", "submarca": "PERFORMANCE & EVOLUÇÃO"},
- "cores": {"destaque": [225, 16, 24], "linha": [196, 198, 204], "numero": [255, 255, 255], "texto_faixa": [255, 255, 255]}
+ "tema": {
+  "logo": "logo/logo-av.png",
+  "fundo": null,
+  "handle": "@treinadorandrevarela",
+  "marca": "ANDRÉ VARELA",
+  "submarca": "PERFORMANCE & EVOLUÇÃO"
+ },
+ "cores": {
+  "destaque": [
+   161,
+   18,
+   24
+  ],
+  "linha": [
+   176,
+   180,
+   188
+  ],
+  "numero": [
+   255,
+   255,
+   255
+  ],
+  "texto_faixa": [
+   255,
+   255,
+   255
+  ]
+ }
 }
