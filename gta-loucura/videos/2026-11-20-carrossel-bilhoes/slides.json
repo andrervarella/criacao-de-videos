@@ -1,14 +1,68 @@
 [
- {"tipo":"capa","foco":0.6,"etiqueta":"ÚLTIMA HORA  •  OFICIAL ROCKSTAR","titulo_1":"GTA 6 FATUROU","titulo_2":"US$ 3,79 BILHÕES","tam_titulo":110,
-  "texto":"Em um único dia. Segundo a Rockstar, é o maior lançamento do entretenimento da história.","faixa":"DESLIZA PRA VER OS NÚMEROS","fonte":"Fonte: Rockstar Games / Take-Two • 20.11.2026"},
- {"tipo":"numero","foco":0.45,"etiqueta":"O RECORDE","titulo_1":"MAIOR ESTREIA","titulo_2":"DA HISTÓRIA","numero":"US$ 3,79 bi","rotulo":"em vendas no 1º dia (pré-venda + lançamento)",
-  "texto":"A Take-Two diz que é recorde em qualquer mídia: cinema, música e games.","fonte":"Fontes: Rockstar Games / Take-Two, Variety"},
- {"tipo":"texto","foco":0.62,"etiqueta":"COMPARAÇÃO","titulo_1":"MAIS QUE AVATAR","titulo_2":"EM 24 HORAS","tam_titulo":104,
-  "texto":"Só no primeiro dia, o GTA 6 faturou quase o mesmo que os dois últimos filmes de Avatar somaram nos cinemas.","faixa":"13 ANOS DE ESPERA VALERAM","fonte":"Fonte: Variety • 20.11.2026"},
- {"tipo":"numero","foco":0.5,"etiqueta":"E AS CÓPIAS?","titulo_1":"NINGUÉM SABE","titulo_2":"AO CERTO","numero":"24 MILHÕES","rotulo":"de cópias estimadas no 1º dia",
-  "texto":"A Take-Two não divulgou as cópias. A Sensor Tower estima mais de 24 milhões e US$ 2,36 bi até o fim do lançamento.","fonte":"Fontes: Variety, Sensor Tower"},
- {"tipo":"numero","foco":0.58,"etiqueta":"E O GTA 5?","titulo_1":"O IRMÃO MAIS VELHO","titulo_2":"FICOU PRA TRÁS","numero":"QUASE 3X","rotulo":"a receita do 1º dia do GTA 5",
-  "texto":"Pela estimativa da Sensor Tower, o GTA 6 fez quase o triplo do que o GTA 5 fez na estreia, em 2013.","fonte":"Fonte: Sensor Tower"},
- {"tipo":"cta","foco":0.66,"etiqueta":"E VOCÊ?","titulo_1":"JÁ TÁ JOGANDO","titulo_2":"OU TÁ ESPERANDO?","tam_titulo":104,
-  "texto":"Comenta aí: PS5 ou Xbox? E manda pro amigo que ainda não comprou.","faixa":"SALVA E SEGUE A @GTA6_LOUCURA","fonte":"Fontes: Rockstar/Take-Two, Variety, Sensor Tower"}
+ {
+  "tipo": "capa",
+  "foco": 0.6,
+  "etiqueta": "ÚLTIMA HORA  •  OFICIAL ROCKSTAR",
+  "titulo_1": "GTA 6 FATUROU",
+  "titulo_2": "US$ 3,79 BILHÕES",
+  "tam_titulo": 110,
+  "texto": "Em um único dia. Segundo a Rockstar, é o maior lançamento do entretenimento da história.",
+  "faixa": "DESLIZA PRA VER OS NÚMEROS",
+  "fonte": "Fonte: Rockstar Games / Take-Two • 20.11.2026"
+ },
+ {
+  "tipo": "numero",
+  "foco": 0.45,
+  "etiqueta": "O RECORDE",
+  "titulo_1": "MAIOR ESTREIA",
+  "titulo_2": "DA HISTÓRIA",
+  "numero": "US$ 3,79 bi",
+  "rotulo": "em vendas no 1º dia (pré-venda + lançamento)",
+  "texto": "A Take-Two diz que é recorde em qualquer mídia: cinema, música e games.",
+  "fonte": "Fontes: Rockstar Games / Take-Two, Variety"
+ },
+ {
+  "tipo": "texto",
+  "foco": 0.62,
+  "etiqueta": "COMPARAÇÃO",
+  "titulo_1": "QUASE DOIS AVATAR",
+  "titulo_2": "EM UM DIA SÓ",
+  "tam_titulo": 104,
+  "texto": "Só no primeiro dia, o GTA 6 faturou quase o mesmo que os dois últimos filmes de Avatar somaram nos cinemas.",
+  "faixa": "13 ANOS DE ESPERA VALERAM",
+  "fonte": "Fonte: Variety • 20.11.2026"
+ },
+ {
+  "tipo": "numero",
+  "foco": 0.5,
+  "etiqueta": "E AS CÓPIAS?",
+  "titulo_1": "NINGUÉM SABE",
+  "titulo_2": "AO CERTO",
+  "numero": "24 MILHÕES",
+  "rotulo": "de cópias estimadas no 1º dia",
+  "texto": "A Take-Two não divulgou as cópias. A Sensor Tower estima mais de 24 milhões e US$ 2,36 bi até o fim do lançamento.",
+  "fonte": "Fontes: Variety, Sensor Tower"
+ },
+ {
+  "tipo": "numero",
+  "foco": 0.58,
+  "etiqueta": "E O GTA 5?",
+  "titulo_1": "O IRMÃO MAIS VELHO",
+  "titulo_2": "FICOU PRA TRÁS",
+  "numero": "QUASE 3X",
+  "rotulo": "a receita do 1º dia do GTA 5",
+  "texto": "Pela estimativa da Sensor Tower, o GTA 6 fez quase o triplo do que o GTA 5 fez na estreia, em 2013.",
+  "fonte": "Fonte: Sensor Tower"
+ },
+ {
+  "tipo": "cta",
+  "foco": 0.66,
+  "etiqueta": "E VOCÊ?",
+  "titulo_1": "JÁ TÁ JOGANDO",
+  "titulo_2": "OU TÁ ESPERANDO?",
+  "tam_titulo": 104,
+  "texto": "Comenta aí: PS5 ou Xbox? E manda pro amigo que ainda não comprou.",
+  "faixa": "SALVA E SEGUE A @GTA6_LOUCURA",
+  "fonte": "Fontes: Rockstar/Take-Two, Variety, Sensor Tower"
+ }
 ]
