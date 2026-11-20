@@ -69,6 +69,29 @@ Pergunta ou chamada (marca um amigo / comenta / salva) 👇
 - **Depois de postar:** ativar legendas automáticas (Reel → ⋯ → Gerenciar legendas) e responder comentários na primeira hora.
 - **Ferramenta:** vidIQ (`video_upload` → `instagram_publish_reel` ou rascunho agendado). Publicar não gasta crédito.
 
+## 6.1 Carrosséis (conteúdo ORIGINAL — prioridade)
+
+Gerados por `scripts/carrossel_v1.py` a partir de `slides.json` (4:5, 1080x1350). Exemplo: `videos/2026-11-20-carrossel-bilhoes/`.
+
+**Pauta:**
+- O que está forte nas últimas horas: vidIQ `trending_videos` (`recentVphEngaged`, pt) e `instagram_tiktok_outlier_search`, além de busca de notícias do dia.
+- Priorizar notícia oficial, números, curiosidades e listas ("5 coisas que…"), comparações e polêmicas leves.
+
+**Estrutura (5 a 8 slides):**
+1. **Capa:** etiqueta ("ÚLTIMA HORA • OFICIAL") + título de 2 linhas (branca + rosa) + 1 frase + faixa "DESLIZA…".
+2. **Miolo:** um fato por slide, com número grande em cartão neon quando houver dado.
+3. **Último slide:** pergunta para comentar + "SALVA E SEGUE".
+- **Fonte em todo slide**, no rodapé. Nada de "vazou", nem informação sem fonte confiável.
+
+**Checagem antes de postar:**
+- Cada número e cada comparação conferidos contra a fonte, com o mesmo sentido. Ex.: "quase o mesmo que" ≠ "mais que".
+- Estimativas sempre aparecem como estimativa (ex.: Sensor Tower).
+
+**Imagens:**
+- O que dá para fazer hoje: arte própria (fundo neon + tipografia + cartões).
+- Prints de lives e de notícias só com crédito visível, e o carrossel tem que ter edição substancial (texto, layout, análise), não pode ser só o print.
+- Limitação técnica: este ambiente ainda não consegue baixar prints gerados no vidIQ, porque a rede está bloqueada. Para liberar, o André pode permitir os domínios `*.amazonaws.com` e `assets.vidiq.com` em claude.ai → Configurações → Capacidades.
+
 ## 7. ⚠️ Regra de originalidade (MAIS IMPORTANTE)
 
 O Instagram corta da recomendação as contas que mais repostam conteúdo dos outros do que criam conteúdo próprio:
@@ -100,10 +123,13 @@ Conferir de vez em quando: Configurações → **Status da conta** no Instagram.
 |---|---|---|
 | 20/11/2026 | Coringa — "WASTED" em português | https://www.instagram.com/reel/Df-csajHBCj/ |
 | 20/11/2026 | Jorlan — "Tá pago sem treinar" (#003) | https://www.instagram.com/reel/Df-lJ2ACap6/ |
-| 21/11/2026 | Jorlan — "Perna fina" (#004) | rascunho para 19h07 |
-| 22/11/2026 | Jorlan — "Olympia" (#005) | rascunho para 19h07 |
+| 21/11/2026 | Carrossel — "US$ 3,79 bilhões no 1º dia" (original) | rascunho para 12h07 (aguarda ok) |
+| 21/11/2026 | Jorlan — "Perna fina" (#004) | agendado 19h07 |
+| 22/11/2026 | Jorlan — "Olympia" (#005) | agendado 19h07 |
 
 ## 10. Aprendizados (adicione no topo)
+
+- **20/11/2026:** Checar o sentido exato das comparações antes de postar (o carrossel dos bilhões quase saiu com "mais que Avatar", mas a fonte dizia "quase o mesmo").
 
 - **20/11/2026:** O Instagram limita contas que repostam conteúdo dos outros; borda e crédito não tornam o vídeo original; a conta precisa ter maioria de posts originais em 30 dias. Fontes: creators.instagram.com ("Rewarding original creators", 30/04/2026), Buffer, Metricool, Later.
 - **20/11/2026:** Hashtags servem para classificar, não para gerar alcance; usar no máximo 5, descritivas. Legenda com palavras-chave ajuda a descoberta. Fontes: SocialPilot, Skeepers, Keywords Everywhere.
