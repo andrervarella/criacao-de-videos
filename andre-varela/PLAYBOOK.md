@@ -1,0 +1,78 @@
+# PLAYBOOK — André Varela (@treinadorandrevarela)
+
+> Manual de conteúdo da marca pessoal. Vale para Claude, ChatGPT e Codex.
+> **Base:** o que funcionou na GTA Loucura (`../gta-loucura/PLAYBOOK.md`), adaptado para **autoridade em treino**: menos humor, mais conteúdo técnico que as pessoas salvam e compartilham.
+> O repositório privado `AV-LANDPAGE-VIDEOS` continua sendo a fonte oficial da marca (identidade, landing page). Aqui fica só o que precisa de link público ou é reaproveitável.
+
+---
+
+## 1. Posicionamento
+
+- **Quem fala:** profissional de educação física, mais de 15 anos de experiência, consultoria esportiva online e personal presencial, preparação de atletas de fisiculturismo.
+- **Tom:** autoridade e clareza. Explica o porquê e corta mito. Usa frases da marca, como "O básico executado com excelência torna o resultado inevitável".
+- **Objetivo dos posts:** salvamento e compartilhamento (prova de valor), depois DM e agendamento de consulta.
+
+## 2. O que reaproveitamos da GTA Loucura
+
+| Mecanismo | Na GTA Loucura | No André Varela |
+|---|---|---|
+| Gerador de carrossel | `carrossel_v1.py` + `slides.json` | O mesmo script, com o tema `andre-varela/tema-av.json` (preto, vermelho, prata) |
+| Moldura de Reels | `layout_v3.py` (janela 16:9) | Versão AV: vídeo vertical do André falando + título-gancho + legenda queimada (a fazer) |
+| Pesquisa de pauta | vidIQ trending e outliers de "GTA 6" | Os mesmos tools com temas de treino, hipertrofia, emagrecimento e mitos de academia |
+| Cortes de vídeo longo | vidIQ `video_watch` + `trim_media` | Lives, podcasts e aulas do próprio André → cortes de 30–60s com a melhor explicação |
+| Legenda queimada | Instagram automático | AI Producer (OpusClip): transcreve e põe legenda no vídeo do André (grátis por tempo limitado) |
+| Publicação | vidIQ (rascunho → agendar) | vidIQ, depois de conectar a conta @treinadorandrevarela no vidIQ |
+| Conferência | Baixar o vídeo e ver 4 quadros | Igual. E conferir cada afirmação técnica contra a fonte |
+| Repositório público | `criacao-de-videos` | Pasta `andre-varela/` (logo, tema, exemplos) |
+
+## 3. Formatos que mais servem para autoridade
+
+1. **Carrossel educativo (o principal).** Mito × verdade, "3 erros que…", passo a passo de técnica, comparações (ex.: halter × barra).
+   - Capa com promessa clara, um ponto por slide, último slide com resumo + "salva" + chamada para consultoria.
+2. **Reels do André falando (30–60s).** Gancho nos 2 primeiros segundos ("Você não ganha massa porque…"), legenda queimada, B-roll de treino.
+3. **Reels de técnica.** Execução certa × errada, filmada por ele, com setas e textos.
+4. **Bastidores e prova social.** Evolução de alunos, só com **autorização por escrito** e sem promessa de resultado.
+5. **Cortes de lives e aulas.** Melhores explicações de vídeos longos dele.
+
+**Originalidade:** o conteúdo dele já é original, então a regra de "agregador" da GTA Loucura não preocupa aqui. Mesmo assim, nunca repostar vídeo de outro criador sem edição substancial e crédito.
+
+## 4. Regras de conteúdo técnico (obrigatórias)
+
+- **Toda afirmação técnica precisa de base:** estudo, diretriz ou consenso, citado no rodapé do slide ou na legenda. Na dúvida, escreve "depende" e explica do que depende.
+- **Sem promessa de resultado.** Nada de "perca 10 kg em 30 dias" nem antes/depois sem contexto e sem autorização.
+- **Nutrição:** falar de princípios gerais (proteína, hidratação, consistência). Plano alimentar e prescrição de dieta são do nutricionista; quando o assunto for esse, indicar o profissional. Suplemento: só com base científica, sem diagnóstico.
+- **Segurança:** variações para iniciantes e aviso de procurar avaliação em caso de dor ou lesão.
+- Conferir números e comparações antes de postar, no mesmo cuidado da GTA Loucura ("quase o mesmo" ≠ "mais que").
+
+## 5. Identidade visual nos posts
+
+- **Cores:** preto (fundo), vermelho `#E11018` (destaque), prata/branco (texto e linhas).
+- **Marca:** "ANDRÉ VARELA" + "PERFORMANCE & EVOLUÇÃO". Quando subirem o logo AV para `andre-varela/logo/logo-av.png`, o gerador usa o logo no lugar do texto.
+- **Fonte:** Montserrat (Black/ExtraBold), títulos em caixa alta.
+- **Fotos:** fotos reais do André treinando ou dando aula. Ele é a prova de autoridade.
+
+## 6. Legenda e hashtags
+
+```
+GANCHO (uma linha que dá vontade de ler)
+2–4 linhas explicando o ponto principal, com palavras-chave (hipertrofia, treino de perna, emagrecimento…).
+Chamada: "Salva pra usar no próximo treino" / "Manda pra quem precisa ouvir isso".
+Quer um treino feito para você? Consultoria online: link na bio.
+#hipertrofia #treino #musculacao #personaltrainer #consultoriaonline
+```
+- Máximo 5 hashtags, todas descritivas. Marcar só quem aparece no post.
+
+## 7. Como gerar um carrossel AV
+
+```
+cd gta-loucura/scripts
+python3 carrossel_v1.py ../../andre-varela/<pasta>/slides.json ../../andre-varela/<pasta>/ ../../andre-varela/tema-av.json
+```
+O formato do `slides.json` é o mesmo da GTA Loucura (`tipo`, `etiqueta`, `titulo_1/2`, `numero`, `rotulo`, `texto`, `faixa`, `fonte`, `foto_topo`). Exemplo em `andre-varela/exemplos/`.
+
+## 8. Pendências para destravar
+
+- [ ] Subir o logo AV em PNG (fundo transparente) para `andre-varela/logo/logo-av.png`.
+- [ ] Conectar @treinadorandrevarela no vidIQ, para postar e agendar.
+- [ ] Separar algumas fotos e vídeos de treino do André, para fotos e B-roll.
+- [ ] Copiar este playbook para o repositório privado `AV-LANDPAGE-VIDEOS`, para o Codex também seguir.

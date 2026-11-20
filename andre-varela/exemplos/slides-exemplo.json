@@ -1,0 +1,6 @@
+[
+ {"tipo":"capa","etiqueta":"TREINO  •  EXEMPLO DE CAPA","titulo_1":"O BÁSICO BEM FEITO","titulo_2":"VENCE O AVANÇADO","tam_titulo":96,
+  "texto":"Exemplo de capa: uma promessa clara do que a pessoa vai aprender ao deslizar.","faixa":"SALVA PRA USAR NO TREINO","fonte":"Referência: [estudo / diretriz que embasa o post]"},
+ {"tipo":"numero","etiqueta":"DADO-CHAVE","titulo_1":"UM NÚMERO","titulo_2":"QUE PRENDE","numero":"10–20","rotulo":"exemplo: séries semanais por grupo muscular",
+  "texto":"Exemplo de slide com número em destaque e a explicação curta embaixo. Sempre com a fonte no rodapé.","fonte":"Referência: [fonte científica]"}
+]

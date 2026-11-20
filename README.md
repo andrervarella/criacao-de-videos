@@ -7,6 +7,7 @@ Existe para que ferramentas de vídeo (vidIQ, OpusClip, HyperFrames, Fenaky, Can
 ## Manuais
 
 - **GTA Loucura:** [`gta-loucura/PLAYBOOK.md`](gta-loucura/PLAYBOOK.md) — como criar, editar e postar (vale para Claude, ChatGPT e Codex).
+- **André Varela:** [`andre-varela/PLAYBOOK.md`](andre-varela/PLAYBOOK.md) — os mesmos mecanismos adaptados para autoridade em treino.
 
 ## Pastas
 

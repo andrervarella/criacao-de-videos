@@ -1,6 +1,7 @@
 """Carrossel GTA Loucura (1080x1350, 4:5) a partir de um JSON de slides.
 
-Uso: python3 carrossel_v1.py slides.json pasta_saida
+Uso: python3 carrossel_v1.py slides.json pasta_saida [tema.json]
+Sem tema = padrão GTA Loucura. Tema da marca André Varela: andre-varela/tema-av.json
 Cada slide: {"tipo": "capa"|"numero"|"texto"|"cta", ...}. Veja um exemplo em
 videos/2026-11-20-carrossel-bilhoes/slides.json.
 """
@@ -10,6 +11,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 AQUI = os.path.dirname(os.path.abspath(__file__)); RAIZ = os.path.join(AQUI, '..')
 W, H = 1080, 1350
 PINK = (255, 36, 145); CYAN = (45, 230, 240); WHITE = (255, 255, 255); DARK = (22, 6, 36); GOLD = (255, 205, 80)
+TEMA = {'logo': 'logo/plaquinha-gta-loucura.png', 'fundo': 'fundos/fundo-vice-neon-v1.png', 'handle': '@gta6_loucura', 'marca': None, 'submarca': None}
 MI = '/usr/share/fonts/truetype/google-fonts/ofl/montserrat/Montserrat-Italic[wght].ttf'
 MR = '/usr/share/fonts/truetype/google-fonts/ofl/montserrat/Montserrat[wght].ttf'
 
@@ -35,7 +37,17 @@ def brilho(base, camada, r=16, n=2):
     base.alpha_composite(camada)
 
 def fundo(foco_y=0.55, escurecer=150):
-    bg = Image.open(os.path.join(RAIZ, 'fundos', 'fundo-vice-neon-v1.png')).convert('RGBA')
+    if not TEMA.get('fundo'):
+        im = Image.new('RGBA', (W, H), (8, 8, 10, 255)); d = ImageDraw.Draw(im)
+        glow = Image.new('RGBA', (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(glow)
+        gd.ellipse([W - 420, -380, W + 380, 380], fill=(*PINK, 70))
+        gd.ellipse([-300, H - 260, 380, H + 300], fill=(*PINK, 40))
+        im.alpha_composite(glow.filter(ImageFilter.GaussianBlur(120)))
+        lin = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(lin)
+        for x in range(-H, W, 46): ld.line([(x, H), (x + H, 0)], fill=(255, 255, 255, 6), width=2)
+        im.alpha_composite(lin)
+        return im
+    bg = Image.open(os.path.join(RAIZ, TEMA['fundo'])).convert('RGBA')
     s = W / bg.width * 1.15; bg = bg.resize((int(bg.width * s), int(bg.height * s)), Image.LANCZOS)
     y0 = int(bg.height * foco_y - H / 2); y0 = max(0, min(y0, bg.height - H))
     im = bg.crop(((bg.width - W) // 2, y0, (bg.width - W) // 2 + W, y0 + H))
@@ -46,9 +58,13 @@ def fundo(foco_y=0.55, escurecer=150):
 
 def topo(im, n, total):
     d = ImageDraw.Draw(im)
-    logo = Image.open(os.path.join(RAIZ, 'logo', 'plaquinha-gta-loucura.png'))
-    lw = 250; logo = logo.resize((lw, int(logo.height * lw / logo.width)), Image.LANCZOS)
-    im.alpha_composite(logo, (48, 48))
+    if TEMA.get('logo') and os.path.exists(os.path.join(RAIZ, TEMA['logo'])):
+        logo = Image.open(os.path.join(RAIZ, TEMA['logo'])).convert('RGBA')
+        lw = 250; logo = logo.resize((lw, int(logo.height * lw / logo.width)), Image.LANCZOS)
+        im.alpha_composite(logo, (48, 48))
+    else:  # marca em texto (ex.: ANDRÉ VARELA / PERFORMANCE & EVOLUÇÃO)
+        d.text((52, 70), TEMA.get('marca') or '', font=fonte(40, 'Black', it=False), fill=WHITE)
+        d.text((54, 122), TEMA.get('submarca') or '', font=fonte(24, 'Bold', it=False), fill=PINK)
     d.rectangle([330, 118, 900, 123], fill=CYAN)
     t = f'{n}/{total}'; f = fonte(40, 'Black')
     x1 = 1032; x0 = x1 - d.textlength(t, font=f) - 50
@@ -87,13 +103,15 @@ def faixa(im, y, txt):
 
 def fontes(im, txt):
     d = ImageDraw.Draw(im); d.rectangle([50, 1228, 1030, 1231], fill=CYAN)
-    d.text((54, 1250), txt, font=fonte(26, 'SemiBold'), fill=(225, 215, 240))
-    d.text((1030, 1250), '@gta6_loucura', font=fonte(28, 'Bold'), fill=PINK, anchor='ra')
+    f = fonte(26, 'SemiBold')
+    while txt and d.textlength(txt, font=f) > 600: txt = txt[:-2].rstrip() + '…'
+    d.text((54, 1250), txt, font=f, fill=(225, 215, 240))
+    d.text((1030, 1250), TEMA['handle'], font=fonte(28, 'Bold'), fill=PINK, anchor='ra')
 
 def cartao_numero(im, y, numero, rotulo):
     d = ImageDraw.Draw(im)
     box = Image.new('RGBA', (W, H), (0, 0, 0, 0)); bd = ImageDraw.Draw(box)
-    bd.rounded_rectangle([50, y, 1030, y + 330], radius=34, fill=(14, 4, 28, 215), outline=(*CYAN, 255), width=5)
+    bd.rounded_rectangle([50, y, 1030, y + 330], radius=34, fill=(14, 4, 28, 215) if TEMA.get('fundo') else (18, 18, 22, 230), outline=(*CYAN, 255), width=5)
     brilho(im, box, 18, 1); d = ImageDraw.Draw(im)
     f = caber(d, numero, 'Black', 190, 900)
     c = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(c).text((540, y + 140), numero, font=f, fill=(*GOLD, 255), anchor='mm')
@@ -133,6 +151,11 @@ def slide(s, n, total):
 
 if __name__ == '__main__':
     spec = json.load(open(sys.argv[1], encoding='utf-8')); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
+    if len(sys.argv) > 3:
+        t = json.load(open(sys.argv[3], encoding='utf-8'))
+        RAIZ = os.path.dirname(os.path.abspath(sys.argv[3]))
+        TEMA.update(t.get('tema', {}))
+        PINK = tuple(t['cores']['destaque']); CYAN = tuple(t['cores']['linha']); GOLD = tuple(t['cores']['numero']); DARK = tuple(t['cores']['texto_faixa'])
     for i, s in enumerate(spec, 1):
         slide(s, i, len(spec)).save(os.path.join(out, f'slide-{i:02d}.jpg'), quality=93)
     print('ok', len(spec))

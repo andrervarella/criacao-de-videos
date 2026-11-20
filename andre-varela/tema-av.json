@@ -1,0 +1,5 @@
+{
+ "tema": {"logo": "logo/logo-av.png", "fundo": null, "handle": "@treinadorandrevarela",
+          "marca": "ANDRÉ VARELA", "submarca": "PERFORMANCE & EVOLUÇÃO"},
+ "cores": {"destaque": [225, 16, 24], "linha": [196, 198, 204], "numero": [255, 255, 255], "texto_faixa": [255, 255, 255]}
+}
