@@ -1,0 +1,99 @@
+[
+ {
+  "tipo": "capa",
+  "foto": {
+   "arquivo": "(foto privada: av-landpage-videos/assets/originais/01_FOTOS_FAVORITAS_USAR_COMO_BASE/Screenshot_20261028_230014_Gallery.jpg)",
+   "recorte": [
+    0,
+    390,
+    1080,
+    2008
+   ],
+   "foco_x": 0.55,
+   "foco_y": 0.42
+  },
+  "etiqueta": "ESTUDO NOVO · NATURE MEDICINE",
+  "titulo_1": "CANETA EMAGRECEDORA",
+  "titulo_2": "SEM MUSCULAÇÃO?",
+  "tam_titulo": 80,
+  "texto": "Um estudo novo testou as duas coisas juntas por 40 semanas. Veja o resultado.",
+  "fonte": "Fonte: Green et al., Nature Medicine, nov/2026 (estudo T-REx)"
+ },
+ {
+  "tipo": "lista",
+  "etiqueta": "O ESTUDO",
+  "titulo_1": "O QUE ELES",
+  "titulo_2": "FIZERAM",
+  "itens": [
+   "120 adultos de 50 a 70 anos, com obesidade ou sobrepeso.",
+   "Todos usaram tirzepatida (Mounjaro) por 40 semanas.",
+   "Metade fez musculação supervisionada, 3 vezes por semana.",
+   "A outra metade usou só a medicação."
+  ],
+  "fonte": "Fonte: Green et al., Nature Medicine, nov/2026 (estudo T-REx)"
+ },
+ {
+  "tipo": "numero",
+  "etiqueta": "RESULTADO 1",
+  "titulo_1": "NA BALANÇA,",
+  "titulo_2": "EMPATE",
+  "numero": "−22 kg",
+  "rotulo": "em média, nos dois grupos",
+  "destaque": "A diferença não estava em quanto perderam. Estava no que perderam.",
+  "fonte": "Fonte: Green et al., Nature Medicine, nov/2026 (estudo T-REx)"
+ },
+ {
+  "tipo": "numero",
+  "etiqueta": "RESULTADO 2",
+  "titulo_1": "QUEM TREINOU",
+  "titulo_2": "PRESERVOU MAIS",
+  "numero": "−23%",
+  "rotulo": "menos massa magra perdida com musculação",
+  "texto": "4,7 kg de massa magra perdidos só com a medicação, contra 3,6 kg com treino de força.",
+  "tam_texto": 32,
+  "nota": "Exame DXA: mede massa magra (músculo e outros tecidos), não só músculo.",
+  "fonte": "Fonte: Green et al., Nature Medicine, nov/2026 (estudo T-REx)"
+ },
+ {
+  "tipo": "compara",
+  "etiqueta": "RESULTADO 3",
+  "titulo_1": "E A FORÇA?",
+  "titulo_2": "AQUI MUDOU TUDO",
+  "esq": {
+   "topo": "SÓ MEDICAÇÃO",
+   "titulo": "MAIS FRACO",
+   "texto": "Perdeu força nos 3 testes: supino, puxada e cadeira extensora."
+  },
+  "dir": {
+   "topo": "MEDICAÇÃO + TREINO",
+   "titulo": "MAIS FORTE",
+   "texto": "Ganhou força. Diferença de 9 a 13 kg entre os grupos."
+  },
+  "texto": "Força é o que te mantém funcional: subir escada, carregar peso, envelhecer bem.",
+  "tam_texto": 32,
+  "fonte": "Fonte: Green et al., Nature Medicine, nov/2026 (estudo T-REx)"
+ },
+ {
+  "tipo": "lista",
+  "etiqueta": "NA PRÁTICA",
+  "titulo_1": "O QUE LEVAR",
+  "titulo_2": "DESSE ESTUDO",
+  "itens": [
+   "Caneta só com prescrição e acompanhamento médico.",
+   "Treino de força desde o início, com progressão de carga.",
+   "Proteína adequada, ajustada com seu nutricionista.",
+   "Acompanhe força e medidas. Não só a balança."
+  ],
+  "nota": "O estudo avaliou adultos de 50 a 70 anos, sedentários e sem diabetes.",
+  "fonte": "Fonte: Green et al., Nature Medicine, nov/2026 (estudo T-REx)"
+ },
+ {
+  "tipo": "cta",
+  "titulo_1": "A BALANÇA MOSTRA",
+  "titulo_2": "QUANTO VOCÊ PERDEU.",
+  "tam_titulo": 80,
+  "destaque": "Ela não mostra O QUE você perdeu.",
+  "texto": "Salve este post e envie para quem está usando a caneta. Quer um treino pensado para essa fase? Me chama no direct.",
+  "fonte": "ANDRÉ VARELA · PERFORMANCE & EVOLUÇÃO"
+ }
+]
