@@ -90,6 +90,7 @@ Gerados por `scripts/carrossel_v1.py` a partir de `slides.json` (4:5, 1080x1350)
 
 **Imagens:**
 - O que dá para fazer hoje: arte própria (fundo neon + tipografia + cartões).
+- Frames de trailer/live: baixar o vídeo (vidIQ `trim_media`), extrair quadros com ffmpeg, escolher pela folha de contato e usar `foto_topo` no slides.json com crédito no canto da foto.
 - Prints de lives e de notícias só com crédito visível, e o carrossel tem que ter edição substancial (texto, layout, análise), não pode ser só o print.
 - Rede liberada em 20/11/2026 (claude.ai → Configurações → Capacidades): `assets.vidiq.com`, `ai-internal-ffmpeg-output-prod.s3.amazonaws.com` e `storage.googleapis.com`. Com isso dá para baixar prints e vídeos do vidIQ, montar slides com prints reais e **conferir quadros de todo vídeo antes de postar** (ffmpeg).
 
@@ -124,7 +125,7 @@ Conferir de vez em quando: Configurações → **Status da conta** no Instagram.
 |---|---|---|
 | 20/11/2026 | Coringa — "WASTED" em português | https://www.instagram.com/reel/Df-csajHBCj/ |
 | 20/11/2026 | Jorlan — "Tá pago sem treinar" (#003) | https://www.instagram.com/reel/Df-lJ2ACap6/ |
-| 21/11/2026 | Carrossel — "US$ 3,79 bilhões no 1º dia" (original) | rascunho para 12h07 (aguarda ok) |
+| 20/11/2026 | Carrossel — "US$ 3,79 bilhões no 1º dia" (arte própria + frames do Launch Trailer) | https://www.instagram.com/p/Df-r3SKFAa2/ |
 | 21/11/2026 | Jorlan — "Perna fina" (#004) | agendado 19h07 |
 | 22/11/2026 | Jorlan — "Olympia" (#005) | agendado 19h07 |
 
