@@ -100,14 +100,34 @@ def cartao_numero(im, y, numero, rotulo):
     brilho(im, c, 20, 1)
     d.text((540, y + 270), rotulo, font=caber(d, rotulo, 'ExtraBold', 40, 880, it=False), fill=WHITE, anchor='mm')
 
+def foto(im, y, h, caminho, credito):
+    """Foto em cartão com borda neon e crédito visível no canto."""
+    d = ImageDraw.Draw(im)
+    src = Image.open(caminho).convert('RGBA'); bw = 980
+    r = max(bw / src.width, h / src.height)
+    src = src.resize((int(src.width * r), int(src.height * r)), Image.LANCZOS)
+    src = src.crop(((src.width - bw) // 2, (src.height - h) // 2, (src.width - bw) // 2 + bw, (src.height - h) // 2 + h))
+    m = Image.new('L', (bw, h), 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, bw, h], radius=30, fill=255)
+    fr = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(fr).rounded_rectangle([44, y - 6, 1036, y + h + 6], radius=36, outline=(*CYAN, 255), width=6)
+    brilho(im, fr, 18, 1)
+    im.paste(src, (50, y), m)
+    d = ImageDraw.Draw(im); f = fonte(22, 'Bold', it=False); tw = d.textlength(credito, font=f)
+    d.rounded_rectangle([1030 - tw - 28, y + h - 44, 1022, y + h - 10], radius=10, fill=(10, 4, 24, 220))
+    d.text((1030 - 14 - tw, y + h - 27), credito, font=f, fill=(235, 225, 245), anchor='lm')
+
 def slide(s, n, total):
     im = fundo(s.get('foco', 0.55)); topo(im, n, total)
-    if s.get('etiqueta'): etiqueta(im, 210, s['etiqueta'])
-    y = titulo(im, 300, s.get('titulo_1', ''), s.get('titulo_2', ''), s.get('tam_titulo', 96)) + 30
+    if s.get('foto_topo'):
+        ft = s['foto_topo']; foto(im, 240, ft.get('h', 360), ft['arquivo'], ft['credito'])
+        im2 = ImageDraw.Draw(im)
+    base = (240 + s['foto_topo'].get('h', 360) + 30) if s.get('foto_topo') else 210
+    if s.get('etiqueta'): etiqueta(im, base, s['etiqueta'])
+    y = titulo(im, base + 90, s.get('titulo_1', ''), s.get('titulo_2', ''), s.get('tam_titulo', 96)) + 30
     if s['tipo'] == 'numero':
         cartao_numero(im, y + 10, s['numero'], s['rotulo']); y += 380
     if s.get('texto'): y = paragrafo(im, y + 20, s['texto'])
-    if s.get('faixa'): faixa(im, 1080, s['faixa'])
+    if s.get('faixa'): faixa(im, 1100 if s.get('foto_topo') else 1080, s['faixa'])
     fontes(im, s.get('fonte', ''))
     return im.convert('RGB')
 
