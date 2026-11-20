@@ -119,24 +119,27 @@ def montar(t, janela_transparente=False):
         d.text((cx, cy + 80), 'SEU CORTE AQUI  •  16:9', font=fonte(34, 'Bold'), fill=(255, 255, 255, 120), anchor='mm')
     for (x, y, sx, sy) in [(VX0 - 22, VY0 - 22, 1, 1), (VX1 + 22, VY0 - 22, -1, 1), (VX0 - 22, VY1 + 22, 1, -1), (VX1 + 22, VY1 + 22, -1, -1)]:
         d.line([(x, y), (x + sx * 60, y)], fill=PINK, width=8); d.line([(x, y), (x, y + sy * 60)], fill=PINK, width=8)
-    d.rounded_rectangle([VX0 + 24, VY0 + 24, VX0 + 190, VY0 + 72], radius=10, fill=RED)
-    d.ellipse([VX0 + 40, VY0 + 40, VX0 + 56, VY0 + 56], fill=WHITE)
-    d.text((VX0 + 66, VY0 + 48), 'AO VIVO', font=fonte(28, 'Black'), fill=WHITE, anchor='lm')
     # legenda com faixa escura
     band = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(band).rectangle([0, 1290, W, 1425], fill=(14, 4, 28, 200))
+    ImageDraw.Draw(band).rectangle([0, 1336, W, 1462], fill=(14, 4, 28, 200))
     im.alpha_composite(band.filter(ImageFilter.GaussianBlur(14))); d = ImageDraw.Draw(im)
+    # selo AO VIVO: fora da janela do vídeo, canto inferior direito (regra fixa)
+    # (à esquerda: o lado direito fica sob os botões do Instagram)
+    bx0, by0 = 100, VY1 + 30
+    d.rounded_rectangle([bx0, by0, bx0 + 176, by0 + 46], radius=10, fill=RED)
+    d.ellipse([bx0 + 16, by0 + 15, bx0 + 32, by0 + 31], fill=WHITE)
+    d.text((bx0 + 42, by0 + 23), 'AO VIVO', font=fonte(28, 'Black'), fill=WHITE, anchor='lm')
     fb = fonte(40, 'Bold', italic=False)
-    d.text((44, 1312), t['legenda_1'], font=fb, fill=WHITE)
-    d.text((44, 1362), t['legenda_2'], font=fb, fill=(255, 190, 225))
+    d.text((44, 1350), t['legenda_1'], font=fb, fill=WHITE)
+    d.text((44, 1400), t['legenda_2'], font=fb, fill=(255, 190, 225))
     # faixa rosa com sombra ciano (fora da área dos botões do Instagram)
-    y, bw = 1450, 890
+    y, bw = 1474, 890
     para(54, y + 14, bw, 104, CYAN, 24); para(40, y, bw, 104, PINK, 24)
     d.text((40 + bw / 2, y + 52), t['faixa'], font=caber(d, t['faixa'], 'Black', 50, 32, 820), fill=DARK, anchor='mm')
     # crédito
     ft = fonte(26, 'SemiBold', italic=False); tw = d.textlength(t['credito'], font=ft)
-    d.rounded_rectangle([40, 1590, 40 + tw + 40, 1636], radius=23, fill=(10, 4, 24, 220), outline=(*CYAN, 180), width=2)
-    d.text((60, 1613), t['credito'], font=ft, fill=(225, 215, 240), anchor='lm')
+    d.rounded_rectangle([40, 1604, 40 + tw + 40, 1650], radius=23, fill=(10, 4, 24, 220), outline=(*CYAN, 180), width=2)
+    d.text((60, 1627), t['credito'], font=ft, fill=(225, 215, 240), anchor='lm')
     return im
 
 if __name__ == '__main__':
