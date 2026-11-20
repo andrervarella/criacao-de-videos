@@ -66,6 +66,7 @@ Pergunta ou chamada (marca um amigo / comenta / salva) 👇
 
 - **Formato:** Reels (também aparece na grade). É o formato que chega a quem não segue a página.
 - **Ritmo:** 1 Reel por dia, à noite (~19h de Brasília) até termos dados próprios; depois usar o melhor horário dos insights.
+- **Antes de postar:** baixar o vídeo montado e conferir 4 quadros (cena bate com o título? nada cobrindo rosto?).
 - **Depois de postar:** ativar legendas automáticas (Reel → ⋯ → Gerenciar legendas) e responder comentários na primeira hora.
 - **Ferramenta:** vidIQ (`video_upload` → `instagram_publish_reel` ou rascunho agendado). Publicar não gasta crédito.
 
@@ -90,7 +91,7 @@ Gerados por `scripts/carrossel_v1.py` a partir de `slides.json` (4:5, 1080x1350)
 **Imagens:**
 - O que dá para fazer hoje: arte própria (fundo neon + tipografia + cartões).
 - Prints de lives e de notícias só com crédito visível, e o carrossel tem que ter edição substancial (texto, layout, análise), não pode ser só o print.
-- Limitação técnica: este ambiente ainda não consegue baixar prints gerados no vidIQ, porque a rede está bloqueada. Para liberar, o André pode permitir os domínios `*.amazonaws.com` e `assets.vidiq.com` em claude.ai → Configurações → Capacidades.
+- Rede liberada em 20/11/2026 (claude.ai → Configurações → Capacidades): `assets.vidiq.com`, `ai-internal-ffmpeg-output-prod.s3.amazonaws.com` e `storage.googleapis.com`. Com isso dá para baixar prints e vídeos do vidIQ, montar slides com prints reais e **conferir quadros de todo vídeo antes de postar** (ffmpeg).
 
 ## 7. ⚠️ Regra de originalidade (MAIS IMPORTANTE)
 
