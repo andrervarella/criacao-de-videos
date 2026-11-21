@@ -151,3 +151,6 @@ Conferir de vez em quando: Configurações → **Status da conta** no Instagram.
 
 ## MODELOS PADRÃO (21/11/2026) — usar sempre
 Ver `gta-loucura/modelos/README.md`. Vídeo = layout v6 (vídeo grande + letras dos carrosséis + fundo Vice City). Carrossel = `carrossel_v2_skyline.py` (mesmo fundo e letras). Os layouts antigos (v3, v4, v5, carrossel_v1) ficam só como histórico.
+
+- 21/11/2026 16h43 — Carrossel "5 detalhes do GTA 6 que ninguém viu" (modelo v2, 7 slides) publicado via Windsor. Media ID 18484378495113065. Pauta tirada de um Reel de terceiros; cada assunto checado em fontes (Kotaku, Noobfeed, Supercar Blondie etc.). Itens sem confirmação foram descartados. Prints: Extended Look oficial (4K, Rockstar) + gameplay do canal TGG com crédito.
+- Aprendizado: Reels de "curiosidades" podem usar animações conceituais de fã no lugar de gameplay real — sempre conferir antes de reaproveitar a pauta. Frames de vídeos longos (>30 min): `vidiq_edit_media extract_thumbnail` direto na URL do YouTube (1 crédito); para vídeos de até 30 min, `start_link_download` + ffmpeg com `-ss` direto na URL (sem baixar o arquivo inteiro).
