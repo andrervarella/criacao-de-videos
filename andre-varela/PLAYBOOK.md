@@ -83,3 +83,14 @@ O formato do `slides.json` é o mesmo da GTA Loucura (`tipo`, `etiqueta`, `titul
 ## Regra de estilo (20/11/2026)
 - **Sem contador de páginas** ("1/7", "2/7") nos carrosséis: o Instagram já mostra e o André acha que deixa cara de feito por IA. Em geral, evitar marcas visuais típicas de template de IA.
 - Gerador atual: `andre-varela/scripts/carrossel_av_v1.py` (preto, prata, vermelho #A11218 pontual, logo oficial recortada).
+
+## Histórico de posts
+- 20/11/2026 — Carrossel "Caneta emagrecedora sem musculação?" (7 slides, estudo T-REx, Nature Medicine) publicado via Windsor.ai. Media ID 18184665055427475. Arquivos: `andre-varela/posts/2026-11-20-caneta-musculacao-v1/`.
+
+## Aprendizados técnicos (20/11/2026)
+- **Publicar no AV: usar o Windsor.ai** (conta `treinadorandrevarela`, ação `create_carousel_post` / `create_video_post`). O plano do vidIQ só aceita 1 Instagram (a GTA Loucura). Se o André trocar a senha, o Windsor pede reconexão.
+- **Vídeos do próprio Instagram**: dá para baixar pelo AI Producer (`start_link_download` com o link do Reel) e editar com ffmpeg, sem o André enviar arquivo. Qualidade um pouco menor que o original.
+- **Levantamento de Reels**: vidIQ `ig_profile_reels` (5 créditos por 12) + `watch_shortform_content` (10 créditos) para transcrição e trechos.
+- Reels com música de terceiros (ex.: capacitação SkyFit com Linkin Park) não servem para reaproveitar o áudio.
+- O que mais performa no perfil: o André ensinando/corrigindo de verdade (capacitação 8,9 mil; treino com aluna 3,4 mil e 22 comentários). Conteúdo de IA e de produto fica abaixo.
+- Compilado de teste (20/11): `scripts`-livre, feito com ffmpeg — gancho no topo sem cobrir rosto, marca discreta, encerramento com logo. Foi só teste, não postado.
