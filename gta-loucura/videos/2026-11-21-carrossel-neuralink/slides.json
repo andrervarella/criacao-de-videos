@@ -1,5 +1,5 @@
 {
- "fundo": "gta-loucura/fundos/fundo-vice-skyline-v1.png",
+ "fundo": "/home/claude/criacao-de-videos/gta-loucura/fundos/fundo-vice-skyline-v1.png",
  "slides": [
   {
    "titulo_1": "ELE JOGOU GTA 6",
@@ -8,9 +8,20 @@
     "PACIENTE DA NEURALINK DIRIGIU, VOOU",
     "E LUTOU SEM ENCOSTAR NO CONTROLE"
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-neuralink/fotos/neuralink_12.png",
+   "foto": "fotos/neuralink_12.png",
    "credito_foto": "VÍDEO: NEURALINK (X)",
    "cta_1": "ARRASTA PRO LADO →"
+  },
+  {
+   "titulo_1": "QUEM É ELE?",
+   "titulo_2": "PACIENTE DO ESTUDO.",
+   "sub": [
+    "O NOME NÃO FOI DIVULGADO. EM CIMA:",
+    "A LEITURA DO CÉREBRO AO VIVO."
+   ],
+   "foto": "fotos/neuralink_painel_40.png",
+   "credito_foto": "VÍDEO: NEURALINK (X)",
+   "cta_1": "O CONTROLE ACENDE QUANDO ELE PENSA."
   },
   {
    "titulo_1": "UM DIA DEPOIS",
@@ -19,7 +30,7 @@
     "A NEURALINK POSTOU 2 MINUTOS DE",
     "GAMEPLAY NO X, EM 20 DE NOVEMBRO."
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-neuralink/fotos/neuralink_86.png",
+   "foto": "fotos/neuralink_86.png",
    "credito_foto": "VÍDEO: NEURALINK (X)",
    "cta_1": "+5 MILHÕES DE VIEWS EM 1 DIA."
   },
@@ -30,7 +41,7 @@
     "ELE PENSA EM TOCAR O DEDO ANELAR",
     "E O COMANDO SAI NO JOGO."
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-neuralink/fotos/neuralink_33.png",
+   "foto": "fotos/neuralink_33.png",
    "credito_foto": "VÍDEO: NEURALINK (X)",
    "cta_1": "\"OLHA O QUE UM DEDO FAZ NO GTA\""
   },
@@ -41,7 +52,7 @@
     "ELE IMAGINA DESLIZAR A MÃO DIREITA",
     "PRA FRENTE, TIPO MEXER UM MOUSE."
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-neuralink/fotos/neuralink_62.png",
+   "foto": "fotos/neuralink_62.png",
    "credito_foto": "VÍDEO: NEURALINK (X)",
    "cta_1": "E O PÉ VIROU MAIS UM BOTÃO."
   },
@@ -52,7 +63,7 @@
     "ELE JOGAVA NO IPAD COM UM BASTÃO",
     "NA BOCA. A MANDÍBULA DOÍA."
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-neuralink/fotos/neuralink_50.png",
+   "foto": "fotos/neuralink_50.png",
    "credito_foto": "VÍDEO: NEURALINK (X)",
    "cta_1": "AGORA: \"UM PORTAL PRO MUNDO\"."
   },
@@ -63,7 +74,7 @@
     "O IMPLANTE É EXPERIMENTAL E AINDA",
     "NÃO TEM APROVAÇÃO DA FDA."
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-neuralink/fotos/neuralink_68.png",
+   "foto": "fotos/neuralink_68.png",
    "credito_foto": "VÍDEO: NEURALINK (X)",
    "cta_1": "MAS O FUTURO JÁ CHEGOU NO GTA."
   },
@@ -74,7 +85,7 @@
     "MANDA PRA QUEM AINDA",
     "NÃO VIU ISSO."
    ],
-   "foto": "gta-loucura/videos/2026-11-21-carrossel-detalhes/fotos/ext_754.jpg",
+   "foto": "fotos/ext_754.jpg",
    "credito_foto": "FOTO: ROCKSTAR GAMES",
    "cta_1": "COMENTA: SIM OU NÃO?"
   }
