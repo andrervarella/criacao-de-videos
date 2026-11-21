@@ -13,6 +13,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from layout_v3 import fundo, fonte, caber, brilho, estrela, RAIZ, W, H, PINK, CYAN, WHITE, DARK, RED
 
 VX0, VY0, VX1, VY1 = 230, 440, 850, 1542   # janela 9:16 (620 x 1102)
+SELO_Y = None   # altura do selo AO VIVO/crédito; padrão: logo abaixo da janela
 
 def montar(t, janela_transparente=False):
     im = fundo(); d = ImageDraw.Draw(im)
@@ -51,7 +52,7 @@ def montar(t, janela_transparente=False):
     for (x, y, sx, sy) in [(VX0 - 20, VY0 - 20, 1, 1), (VX1 + 20, VY0 - 20, -1, 1), (VX0 - 20, VY1 + 20, 1, -1), (VX1 + 20, VY1 + 20, -1, -1)]:
         d.line([(x, y), (x + sx * 54, y)], fill=PINK, width=8); d.line([(x, y), (x, y + sy * 54)], fill=PINK, width=8)
     # selo AO VIVO abaixo da janela, à esquerda
-    bx0, by0 = 60, VY1 + 38
+    bx0, by0 = 60, (SELO_Y or VY1 + 38)
     d.rounded_rectangle([bx0, by0, bx0 + 176, by0 + 46], radius=10, fill=RED)
     d.ellipse([bx0 + 16, by0 + 15, bx0 + 32, by0 + 31], fill=WHITE)
     d.text((bx0 + 42, by0 + 23), 'AO VIVO', font=fonte(28, 'Black'), fill=WHITE, anchor='lm')
@@ -61,7 +62,7 @@ def credito_png(texto, saida):
     """Pílula de crédito (ao lado do selo AO VIVO), trocada a cada trecho."""
     im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     ft = fonte(26, 'SemiBold', italic=False); tw = d.textlength(texto, font=ft)
-    x0, y0 = 256, VY1 + 38
+    x0, y0 = 256, (SELO_Y or VY1 + 38)
     d.rounded_rectangle([x0, y0, x0 + tw + 40, y0 + 46], radius=23, fill=(10, 4, 24, 225), outline=(*CYAN, 200), width=2)
     d.text((x0 + 20, y0 + 23), texto, font=ft, fill=(225, 215, 240), anchor='lm')
     im.save(saida)
