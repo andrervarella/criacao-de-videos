@@ -147,3 +147,7 @@ Conferir de vez em quando: Configurações → **Status da conta** no Instagram.
 - Numerar os momentos (#1, #2, #3) e fechar com "Quem foi pior? Comenta 1, 2 ou 3 / marca o amigo" (comentário + compartilhamento).
 - Conferir se o clipe é mesmo do GTA 6 (um corte viral do Paulinho era GTA V).
 - Downloads de YouTube/Instagram: AI Producer `start_link_download`. Música do vidIQ (domínio ai-music-tracks) não baixa direto: passar por `vidiq_edit_media normalize_loudness`.
+
+
+## MODELOS PADRÃO (21/11/2026) — usar sempre
+Ver `gta-loucura/modelos/README.md`. Vídeo = layout v6 (vídeo grande + letras dos carrosséis + fundo Vice City). Carrossel = `carrossel_v2_skyline.py` (mesmo fundo e letras). Os layouts antigos (v3, v4, v5, carrossel_v1) ficam só como histórico.
