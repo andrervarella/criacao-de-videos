@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFilter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from layout_v3 import fonte, caber, brilho, RAIZ, W, H, PINK, CYAN, WHITE, DARK, RED
 
-VX0, VY0, VX1, VY1 = 140, 330, 940, 1752     # janela 9:16 (800 x 1422)
+VX0, VY0, VX1, VY1 = 140, 360, 940, 1782     # janela 9:16 (800 x 1422)
 FUNDO = None   # caminho de outra imagem de fundo (preenche a tela); padrão: fundo-vice-neon-v1
 ESCURECER = 150
 AMARELO = (255, 214, 64)
@@ -37,6 +37,7 @@ def base(janela_transparente=True):
     d.rounded_rectangle([bx0, by0, bx0 + 150, by0 + 40], radius=9, fill=RED)
     d.ellipse([bx0 + 14, by0 + 13, bx0 + 28, by0 + 27], fill=WHITE)
     d.text((bx0 + 38, by0 + 20), 'AO VIVO', font=fonte(24, 'Black'), fill=WHITE, anchor='lm')
+    d.rounded_rectangle([372, 58, 640, 62], radius=2, fill=CYAN)
     fr = Image.new('RGBA', (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(fr).rounded_rectangle([VX0 - 5, VY0 - 5, VX1 + 5, VY1 + 5], radius=26, outline=(*CYAN, 255), width=5)
     brilho(im, fr, 16, 1)
@@ -55,6 +56,39 @@ def faixa(l1, l2):
         brilho(im, c, glow, 1) if glow else im.alpha_composite(c)
     if l1: txt(150, l1, caber(d, l1, 'ExtraBold', 50, 28, 1010), WHITE)
     if l2: txt(240, l2, caber(d, l2, 'Black', 78, 36, 1010), AMARELO, glow=10)
+    return im
+
+INTER = '/usr/share/fonts/opentype/inter/InterDisplay-Black.otf'
+INTER_IT = '/usr/share/fonts/opentype/inter/InterDisplay-BlackItalic.otf'
+
+def _f(path, s):
+    from PIL import ImageFont
+    return ImageFont.truetype(path, s)
+
+def _caber(d, t, path, smax, smin, larg):
+    s = smax
+    while s > smin and d.textlength(t, font=_f(path, s)) > larg: s -= 2
+    return _f(path, s)
+
+def faixa_carrossel(l1, l2, destaque=False):
+    """Estilo das letras dos carrosséis: linha 1 branca pesada; linha 2 em faixa rosa inclinada
+    com barra ciano (ou, em destaque, texto rosa gigante)."""
+    im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    def sombra_txt(xy, t, f, cor, anchor='mm', glow=None):
+        c = Image.new('RGBA', (W, H), (0, 0, 0, 0)); cd = ImageDraw.Draw(c)
+        cd.text((xy[0] + 4, xy[1] + 5), t, font=f, fill=(10, 0, 20, 230), anchor=anchor)
+        im.alpha_composite(c.filter(ImageFilter.GaussianBlur(3)))
+        c = Image.new('RGBA', (W, H), (0, 0, 0, 0)); ImageDraw.Draw(c).text(xy, t, font=f, fill=(*cor, 255), anchor=anchor)
+        brilho(im, c, glow, 1) if glow else im.alpha_composite(c)
+    if l1: sombra_txt((W / 2, 170), l1, _caber(d, l1, INTER, 64, 30, 1000), WHITE)
+    if l2 and destaque:
+        sombra_txt((W / 2, 272), l2, _caber(d, l2, INTER_IT, 118, 40, 1000), PINK, glow=12)
+    elif l2:
+        f = _caber(d, l2, INTER_IT, 52, 28, 880); tw = d.textlength(l2, font=f)
+        x0 = (W - tw) / 2 - 30; x1 = (W + tw) / 2 + 30; y0, y1 = 226, 310; sk = 22
+        d.polygon([(x0 + sk, y0), (x1 + sk, y0), (x1 - sk, y1), (x0 - sk, y1)], fill=PINK)
+        d.polygon([(x0 - sk - 34, y0), (x0 - sk - 22, y0), (x0 - sk - 42, y1), (x0 - sk - 54, y1)], fill=CYAN)
+        d.text(((x0 + x1) / 2, (y0 + y1) / 2 + 2), l2, font=f, fill=WHITE, anchor='mm')
     return im
 
 def credito(t):
@@ -83,11 +117,15 @@ if __name__ == '__main__':
     if r.get('fundo'): FUNDO = r['fundo']
     if r.get('escurecer') is not None: ESCURECER = r['escurecer']
     base().save(os.path.join(out, 'base.png'))
-    for f in r['textos']: faixa(f['linha_1'], f.get('linha_2')).save(os.path.join(out, f"faixa-{f['id']}.png"))
+    estilo = r.get('estilo_letras', 'v6')
+    def _faixa(f):
+        if estilo == 'carrossel': return faixa_carrossel(f['linha_1'], f.get('linha_2'), f.get('destaque', False))
+        return faixa(f['linha_1'], f.get('linha_2'))
+    for f in r['textos']: _faixa(f).save(os.path.join(out, f"faixa-{f['id']}.png"))
     for c in r['creditos']: credito(c['texto']).save(os.path.join(out, f"credito-{c['id']}.png"))
     cores = {'branco': WHITE, 'rosa': PINK, 'ciano': CYAN, 'amarelo': AMARELO}
     final([(t, s, cores[c]) for t, s, c in r['final']]).convert('RGB').save(os.path.join(out, 'final.png'))
     p = base(False); f0 = r['textos'][0]
-    p.alpha_composite(faixa(f0['linha_1'], f0.get('linha_2'))); p.alpha_composite(credito(r['creditos'][0]['texto']))
+    p.alpha_composite(_faixa(f0)); p.alpha_composite(credito(r['creditos'][0]['texto']))
     p.convert('RGB').save(os.path.join(out, 'previa.png'))
     print('ok')
