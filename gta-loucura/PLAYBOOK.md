@@ -137,3 +137,13 @@ Conferir de vez em quando: Configurações → **Status da conta** no Instagram.
 - **20/11/2026:** Hashtags servem para classificar, não para gerar alcance; usar no máximo 5, descritivas. Legenda com palavras-chave ajuda a descoberta. Fontes: SocialPilot, Skeepers, Keywords Everywhere.
 - **20/11/2026:** Reels de até 3 minutos podem ir para o Explorar. Fonte: SocialPilot.
 - **20/11/2026:** Repositórios úteis no GitHub para estudar: `social-media-skills/skills` (106 skills de redes sociais para agentes) e `Anil-matcha/AI-Youtube-Shorts-Generator` (cortes automáticos com Whisper, roda em PC).
+
+## Aprendizados 21/11/2026 — vídeo "13 anos... pra isso?!" (v1→v4)
+- **Narração por TTS do vidIQ não agradou** (só 4 vozes pt-BR, nenhuma engraçada). Próximo passo: narração com a voz do André, acelerada/afinada, e um personagem narrador definido a partir de um perfil de referência que ele vai mandar.
+- Narração, quando houver, entra **nas pausas** (congelando o quadro), nunca por cima da fala engraçada do streamer.
+- Música de fundo: **bem baixa**, estilo pastelão. Para viralizar, preferir **música em alta escolhida no app** na hora de postar (o André posta manualmente) — então o vídeo sai **sem música**.
+- **Layout v6 (`scripts/layout_v6_tela_grande.py`)**: vídeo grande 9:16 (800x1422), faixa de texto no topo que muda por cena (linha branca prepara, linha amarela entrega a piada), AO VIVO e crédito na linha de cima. Nada sobre o vídeo.
+- **Abrir pelo clímax** (cold open de ~2s com o momento mais forte) e depois voltar para o começo.
+- Numerar os momentos (#1, #2, #3) e fechar com "Quem foi pior? Comenta 1, 2 ou 3 / marca o amigo" (comentário + compartilhamento).
+- Conferir se o clipe é mesmo do GTA 6 (um corte viral do Paulinho era GTA V).
+- Downloads de YouTube/Instagram: AI Producer `start_link_download`. Música do vidIQ (domínio ai-music-tracks) não baixa direto: passar por `vidiq_edit_media normalize_loudness`.
