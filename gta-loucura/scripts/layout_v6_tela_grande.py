@@ -13,14 +13,22 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from layout_v3 import fonte, caber, brilho, RAIZ, W, H, PINK, CYAN, WHITE, DARK, RED
 
 VX0, VY0, VX1, VY1 = 140, 330, 940, 1752     # janela 9:16 (800 x 1422)
+FUNDO = None   # caminho de outra imagem de fundo (preenche a tela); padrão: fundo-vice-neon-v1
+ESCURECER = 150
 AMARELO = (255, 214, 64)
 
 def base(janela_transparente=True):
     im = Image.new('RGBA', (W, H), (12, 4, 26, 255))
-    bg = Image.open(os.path.join(RAIZ, 'fundos', 'fundo-vice-neon-v1.png')).convert('RGBA')
-    bg = bg.resize((W, int(bg.height * W / bg.width)), Image.LANCZOS)
-    im.alpha_composite(bg, (0, H - bg.height))
-    esc = Image.new('RGBA', (W, H), (8, 2, 18, 150)); im.alpha_composite(esc)
+    if FUNDO:
+        bg = Image.open(FUNDO).convert('RGBA'); r = max(W / bg.width, H / bg.height)
+        bg = bg.resize((int(bg.width * r) + 1, int(bg.height * r) + 1), Image.LANCZOS)
+        x0 = (bg.width - W) // 2; y0 = (bg.height - H) // 2
+        im.alpha_composite(bg.crop((x0, y0, x0 + W, y0 + H)))
+    else:
+        bg = Image.open(os.path.join(RAIZ, 'fundos', 'fundo-vice-neon-v1.png')).convert('RGBA')
+        bg = bg.resize((W, int(bg.height * W / bg.width)), Image.LANCZOS)
+        im.alpha_composite(bg, (0, H - bg.height))
+    esc = Image.new('RGBA', (W, H), (8, 2, 18, ESCURECER)); im.alpha_composite(esc)
     d = ImageDraw.Draw(im)
     logo = Image.open(os.path.join(RAIZ, 'logo', 'plaquinha-gta-loucura.png'))
     lw = 150; logo = logo.resize((lw, int(logo.height * lw / logo.width)), Image.LANCZOS)
@@ -72,6 +80,8 @@ def final(linhas):
 
 if __name__ == '__main__':
     r = json.load(open(sys.argv[1], encoding='utf-8')); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
+    if r.get('fundo'): FUNDO = r['fundo']
+    if r.get('escurecer') is not None: ESCURECER = r['escurecer']
     base().save(os.path.join(out, 'base.png'))
     for f in r['textos']: faixa(f['linha_1'], f.get('linha_2')).save(os.path.join(out, f"faixa-{f['id']}.png"))
     for c in r['creditos']: credito(c['texto']).save(os.path.join(out, f"credito-{c['id']}.png"))
