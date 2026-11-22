@@ -40,7 +40,7 @@ def dl(url,name):
 photo={
 "capa":("https://images.pexels.com/photos/7289304/pexels-photo-7289304.jpeg?auto=compress&cs=tinysrgb&w=1700","foto-real-capa.jpg"),
 "agachamento":("https://images.pexels.com/photos/5327530/pexels-photo-5327530.jpeg?auto=compress&cs=tinysrgb&w=1400","foto-real-agachamento.jpg"),
-"supino":("https://commons.wikimedia.org/wiki/Special:Redirect/file/Bench_Press_-_Flickr_-_colros.jpg","foto-real-supino.jpg"),
+"supino":("https://images.pexels.com/photos/3837743/pexels-photo-3837743.jpeg?auto=compress&cs=tinysrgb&w=1400","foto-real-supino.jpg"),
 "extensora":("https://images.pexels.com/photos/19722966/pexels-photo-19722966.jpeg?auto=compress&cs=tinysrgb&w=1400","foto-real-extensora.jpg"),
 "terra":("https://commons.wikimedia.org/wiki/Special:Redirect/file/Fit_young_man_doing_deadlift_exercise_in_gym.jpg","foto-real-terra.jpg")}
 P={}
