@@ -14,4 +14,4 @@ Licença Pexels: https://www.pexels.com/license/
 Wu et al. (2026), *BMC Sports Science, Medicine and Rehabilitation*, DOI https://doi.org/10.1186/s13102-026-01861-z. Resultados médios transcritos da revisão: hipertrofia g=-0,15, IC 95% -0,39 a 0,09; força dinâmica g=+0,24, IC 95% 0,06 a 0,42. Os gráficos são representações de efeitos padronizados e respectivos ICs, não gráficos de dados brutos.
 
 ## Publicação
-Carrossel de 8 imagens JPEG, 1080 × 1350. Logo AV original de andre-varela/logo/logo-av.png, assinatura PERFORMANCE & EVOLUÇÃO. A postagem só é considerada publicada após confirmação com ID de mídia da API do Instagram.
+Carrossel de 8 imagens JPEG, 1080 × 1350. Logo AV original de andre-varela/logo/logo-av.png, assinatura PERFORMANCE & EVOLUÇÃO. Publicação confirmada em 22/11/2026 pela Windsor.ai na conta @treinadorandrevarela, ação create_carousel_post, resposta "Published carousel post with 8 items", media ID 18486936445118604. Permalink não retornado pela ferramenta, não inferido.
