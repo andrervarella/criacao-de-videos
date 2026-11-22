@@ -126,8 +126,9 @@ Conferir de vez em quando: Configurações → **Status da conta** no Instagram.
 | 20/11/2026 | Coringa — "WASTED" em português | https://www.instagram.com/reel/Df-csajHBCj/ |
 | 20/11/2026 | Jorlan — "Tá pago sem treinar" (#003) | https://www.instagram.com/reel/Df-lJ2ACap6/ |
 | 20/11/2026 | Carrossel — "US$ 3,79 bilhões no 1º dia" (arte própria + frames do Launch Trailer) | https://www.instagram.com/p/Df-r3SKFAa2/ |
-| 21/11/2026 | Jorlan — "Perna fina" (#004) | agendado 19h07 |
-| 22/11/2026 | Jorlan — "Olympia" (#005) | agendado 19h07 |
+| 21/11/2026 | Jorlan — "Perna fina" (#004) | https://www.instagram.com/reel/DgBQ_3JCmXi/ |
+| 22/11/2026 | Jorlan — "Olympia" (#005), postado 9h40 | https://www.instagram.com/reel/DgC0iDwjLC8/ |
+| 22/11/2026 | Carrossel — esteroides da Lucia (10 slides) | agendado 10h00 (vidIQ) |
 
 ## 10. Aprendizados (adicione no topo)
 
