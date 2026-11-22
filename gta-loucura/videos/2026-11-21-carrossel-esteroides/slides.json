@@ -1,0 +1,85 @@
+{
+ "fundo": "/home/claude/criacao-de-videos/gta-loucura/fundos/fundo-vice-skyline-v1.png",
+ "slides": [
+  {
+   "titulo_1": "DÁ PRA TOMAR BOMBA",
+   "titulo_2": "NO GTA 6? SIM.",
+   "sub": ["E A LUCIA NUNCA MAIS", "VOLTA A SER A MESMA"],
+   "foto": "fotos/capa-lucia-bomba.jpg",
+   "credito_foto": "GAMEPLAY: ZANAR (YOUTUBE)",
+   "cta_1": "SALVA ESSE GUIA →"
+  },
+  {
+   "titulo_1": "QUEM OFERECE?",
+   "titulo_2": "O NATE.",
+   "sub": ["PERSONAL MONSTRO DA AJAX GYM.", "ELE TREINA A LUCIA POR SEMANAS."],
+   "foto": "fotos/nate-e-lucia.jpg",
+   "credito_foto": "GAMEPLAY: MELOO (YOUTUBE)",
+   "cta_1": "E NO MEIO DO TREINO..."
+  },
+  {
+   "titulo_1": "1. ONDE FICA",
+   "titulo_2": "AJAX GYM.",
+   "sub": ["ACADEMIA EM VICE CITY. A MISSÃO", "COMEÇA EM STOCKYARD E O GPS TE LEVA."],
+   "foto": "fotos/ajax-gym-fachada.jpg",
+   "credito_foto": "GAMEPLAY: MELOO (YOUTUBE)",
+   "cta_1": "PROCURA A FACHADA VERDE ART DÉCO."
+  },
+  {
+   "titulo_1": "2. COMO LIBERAR",
+   "titulo_2": "CAPÍTULO 4.",
+   "sub": ["TERMINE \"HEAVY LIFTING\". O RAUL LIGA", "PRA LUCIA: VÁ SÓ COM ELA AO PLANEJAMENTO."],
+   "foto": "fotos/ajax-gym-recepcao.jpg",
+   "credito_foto": "GAMEPLAY: ZANAR (YOUTUBE)",
+   "cta_1": "A MISSÃO SE CHAMA \"MAKING GAINZ\"."
+  },
+  {
+   "titulo_1": "3. A ESCOLHA",
+   "titulo_2": "ACEITAR OU NÃO.",
+   "sub": ["O NATE TE MOSTRA A SERINGA.", "SE NÃO FIZER NADA, ELA RECUSA."],
+   "foto": "fotos/oferta-accept-decline.jpg",
+   "credito_foto": "GAMEPLAY: MELOO (YOUTUBE)",
+   "cta_1": "PRA TOMAR, APERTA \"ACCEPT\"."
+  },
+  {
+   "titulo_1": "4. O QUE MUDA",
+   "titulo_2": "FORÇA 5/5.",
+   "sub": ["NO NATURAL O LIMITE É 4/4. COM BOMBA:", "\"BODYBUILDER\" E \"MAX ENHANCED\"."],
+   "foto": "fotos/painel-max-enhanced.jpg",
+   "credito_foto": "GAMEPLAY: ZANAR (YOUTUBE)",
+   "cta_1": "PAUSE > JASON & LUCIA > VEJA O PERFIL."
+  },
+  {
+   "titulo_1": "E NÃO TEM VOLTA",
+   "titulo_2": "É PRO JOGO TODO.",
+   "sub": ["O CORPO DELA MUDA ATÉ O FIM.", "RECUSAR NÃO TEM CASTIGO NENHUM."],
+   "foto": "fotos/resultado-lucia.jpg",
+   "credito_foto": "GAMEPLAY: ZANAR (YOUTUBE)",
+   "cta_1": "PENSA BEM ANTES DE ACEITAR."
+  },
+  {
+   "titulo_1": "O SPEED ACEITOU",
+   "titulo_2": "E SURTOU.",
+   "sub": ["A CENA DA INJEÇÃO VIRALIZOU", "COM A REAÇÃO DO ISHOWSPEED."],
+   "foto": "fotos/speed-reacao.jpg",
+   "credito_foto": "CLIPE: ISHOWSPEED",
+   "cta_1": "A CARA DELE DIZ TUDO."
+  },
+  {
+   "titulo_1": "E O JASON?",
+   "titulo_2": "NÃO TEM BOMBA.",
+   "sub": ["SÓ A LUCIA RECEBE A OFERTA.", "ELE CRESCE NO NATURAL, ATÉ 4/4."],
+   "foto": "fotos/treino-terra.jpg",
+   "credito_foto": "GAMEPLAY: ZANAR (YOUTUBE)",
+   "cta_1": "JASON É 100% NATURAL."
+  },
+  {
+   "titulo_1": "E VOCÊ?",
+   "titulo_2": "ACEITARIA?",
+   "sub": ["COMENTA \"SIM\" OU \"NÃO\" E", "MANDA PRO AMIGO QUE TÁ NO CAP. 4."],
+   "foto": "fotos/lucia-agachamento.jpg",
+   "credito_foto": "GAMEPLAY: MELOO (YOUTUBE)",
+   "cta_1": "SALVA PRA NÃO PERDER A ESCOLHA."
+  }
+ ]
+}
