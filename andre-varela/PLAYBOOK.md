@@ -94,3 +94,6 @@ O formato do `slides.json` é o mesmo da GTA Loucura (`tipo`, `etiqueta`, `titul
 - Reels com música de terceiros (ex.: capacitação SkyFit com Linkin Park) não servem para reaproveitar o áudio.
 - O que mais performa no perfil: o André ensinando/corrigindo de verdade (capacitação 8,9 mil; treino com aluna 3,4 mil e 22 comentários). Conteúdo de IA e de produto fica abaixo.
 - Compilado de teste (20/11): `scripts`-livre, feito com ffmpeg — gancho no topo sem cobrir rosto, marca discreta, encerramento com logo. Foi só teste, não postado.
+
+## Atualização de publicação (25/11/2026)
+Para AV, priorizar Metricool para Insights, melhores horários e agendamento nativo; Windsor.ai pode ser alternativa de publicação imediata quando autorizado e disponível. Isso substitui as indicações antigas de publicar exclusivamente pelo Windsor ou vidIQ. Confirmar conta correta, limite do plano, mídia, aprovação final, data/fuso e ausência de duplicidade; consultar calendário e confirmar status. Dados de acesso e operação ficam somente nos protocolos privados. Respeitar as diretrizes AV vigentes, inclusive não pedir salvamentos/compartilhamentos explicitamente como padrão.
